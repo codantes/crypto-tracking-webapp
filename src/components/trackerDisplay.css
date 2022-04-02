@@ -1,0 +1,33 @@
+
+.token-table{
+    border-collapse: collapse;
+    width: 90%;
+    margin-block: 2rem;
+    
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+.token-table tr{
+    text-align: center;
+}
+
+.token-table thead tr:first-child{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,170,1) 100%); 
+    color:white;
+}
+
+.token-table tbody tr{
+    background-color: white;
+    border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+.token-table tbody tr:hover{
+    background-color: whitesmoke;
+}
+
+.token-table tr td,
+.token-table tr th{
+    padding: 0.5rem 0.4rem;
+}

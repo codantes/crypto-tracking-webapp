@@ -1,0 +1,49 @@
+tr{
+    width: 90%;
+    color: rgb(105, 105, 105);
+    margin-inline: auto;
+    margin-block: 0.1rem;
+    background: whitesmoke;
+    font-family: var(--table);
+    padding: .5rem;
+}
+
+.coin{
+    font-size: 14px;
+}
+
+.coin img{
+    height: 25px;
+}
+
+.change1d p{
+    width: 40%;
+    margin-inline: auto;
+    padding: .2rem;
+    border-radius: 10px;
+}
+
+.extra-info{
+    list-style-type: none;
+    display: block;
+    font-family: var(--table);
+    margin-inline: auto;
+    border: 2px solid rgb(230, 230, 230);
+}
+
+.extra-info li{
+    margin-block: .5rem;
+    margin-inline-start: 1rem;
+    color: rgb(105, 105, 105);
+}
+
+.extra-info li h3{
+    display: inline;
+    margin-inline-end: 0.5rem;
+}
+
+.extra-info li span{
+    padding: .2rem;
+    padding-inline: 0.4rem;
+    border-radius: 10px;
+}
