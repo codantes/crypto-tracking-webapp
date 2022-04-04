@@ -4,7 +4,8 @@ import './trackerDisplay.css';
 
 const TrackerDisplay = () => {
     const [data, setData] = React.useState([]);
-    const [tokenArrayDisplay, setTokenArrayDisplay] = React.useState(null);
+    const [filteredCoin, setFilteredCoin] = React.useState(data);
+    const [search, setSearch] = React.useState('');
 
     React.useEffect(() => {
         var requestOptions = {
@@ -16,10 +17,8 @@ const TrackerDisplay = () => {
             .then(response => response.text())
             .then(result => setData(JSON.parse(result).coins))
             .catch(error => console.log('error', error));
-    },[])
+    },[data])
     
-    console.log(data);
-
     const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
     React.useEffect(() => {
 
@@ -30,8 +29,33 @@ const TrackerDisplay = () => {
         window.addEventListener('resize', changeWidth);
     }, []);
 
+    const handleChange = e => {
+        setSearch(e.target.value);
+      };
+    
+      const filteredCoins = data.filter(coin =>
+        coin.id.toLowerCase().includes(search.toLowerCase())
+      );
+    
+
     return ( 
         <section className="token-info">
+            <div className="warning">
+            {
+                (screenWidth < 700) &&
+                <p>*rotate your device for more information</p>
+
+            }
+            <p>*click the currency for more information</p>
+            </div>
+            <form >
+                <label htmlFor="token-search">Search currency</label>
+                <input 
+                type="text" 
+                name="token-search" 
+                id="token-seacrch"
+                onChange={handleChange}/>
+            </form>
             <table className="token-table">
             <thead>
             <tr> 
@@ -50,7 +74,7 @@ const TrackerDisplay = () => {
             </thead>
                 <tbody>
                 {
-                    data.map(token => {
+                    filteredCoins.map(token => {
                         return(
                             <TokenDisplay
                                 key = {token.id}

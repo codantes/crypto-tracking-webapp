@@ -14,7 +14,7 @@ const TokenDisplay = (props) => {
         color : (props.change1w <= 0)? "red" : "green",
         background : (props.change1w <= 0)? "rgb(255, 114, 114)" : "rgb(136, 253, 13)"
     }
-    const [extraInfo, setExtraInfo] = React.useState(true);
+    const [extraInfo, setExtraInfo] = React.useState(false);
     const toggleExtraInfo = () => (setExtraInfo(prev => (!prev)))
     const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
     React.useEffect(() => {
@@ -27,7 +27,7 @@ const TokenDisplay = (props) => {
     }, []);
     return ( 
         <>
-                <tr className="token" onClick={toggleExtraInfo}>
+            <tr className="token" onClick={toggleExtraInfo}>
             <td className='rank'>{props.rank}</td>
             <td className='coin'>
                 <div>

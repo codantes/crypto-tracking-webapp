@@ -1,11 +1,17 @@
-
 .token-table{
     border-collapse: collapse;
     width: 90%;
     margin-block: 2rem;
-    
+
     margin-inline: auto;
     border-radius: 10px;
+}
+
+.token-info .warning{
+    color: red;
+    font-family: var(--para);
+    text-align: center;
+    margin-block-start: 2rem;
 }
 
 .token-table tr{
@@ -30,4 +36,30 @@
 .token-table tr td,
 .token-table tr th{
     padding: 0.5rem 0.4rem;
+}
+
+form{
+    width: 90%;
+    margin-inline:auto;
+    margin-block: 1rem;
+    text-align: center;
+}
+
+form input{
+    border:3px solid aquamarine;
+    margin-inline: 1rem;
+    height: 1.5rem;
+    border-radius: 5px;
+}
+
+form label{
+    font-family: var(--heading);
+    font-size: 16px;
+}
+
+@media (min-width: 900px){
+    .token-table{
+        width: 70%;
+        margin-inline:auto;
+    }
 }
