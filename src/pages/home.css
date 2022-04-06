@@ -1,0 +1,86 @@
+header{
+    background-image: url("/src/background/svg\(5\).png");
+    background-attachment: fixed;
+    height: 60vh;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 1.5rem;
+    margin-block: 1rem;
+    list-style-type: none;
+    z-index: 1;
+}
+
+.top-logo{
+    display: flex;
+    align-items: center;
+}
+
+.top-logo img{
+    height: 45px;
+}
+
+.top-logo h1{
+    font-family: var(--heading);
+    font-size: 28px;
+    color: white;
+    margin-block-start: 0.4rem;
+    margin-inline: 0.3rem;
+}
+
+.tracker-link button{
+    padding-inline: 1.5rem;
+    padding-block: .3rem;
+    width: 6rem;
+    border-radius: 30px;
+    border: none;
+    background: rgb(39,178,195);
+    background: linear-gradient(41deg, rgba(39,178,195,1) 0%, rgba(172,18,222,1) 99%); 
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: var(--para);
+}
+
+.banner{
+    text-align: center;
+    margin-block: 3.5rem;
+}
+
+.banner h1{
+    color: white;
+    font-family: var(--subheading);
+    font-size: 60px;
+    width: 75%;
+    margin-inline: auto;
+    text-transform: capitalize;
+}
+
+.crypto-intro{
+    margin-block: 2rem;
+}
+
+.crypto-intro article{
+    width: 90%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.crypto-intro h1{
+    font-size: 20px;
+    font-family: var(--subheading);
+}
+
+@media (min-width: 700px){
+    .menu{
+        width: 70%;
+        margin-inline: auto;
+    }
+
+    .banner h1{
+        font-size: 90px;
+    }
+}

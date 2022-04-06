@@ -38,24 +38,31 @@ const TrackerDisplay = () => {
       );
     
 
+
     return ( 
         <section className="token-info">
-            <div className="warning">
-            {
-                (screenWidth < 700) &&
-                <p>*rotate your device for more information</p>
 
-            }
-            <p>*click the currency for more information</p>
-            </div>
             <form >
                 <label htmlFor="token-search">Search currency</label>
-                <input 
-                type="text" 
-                name="token-search" 
-                id="token-seacrch"
-                onChange={handleChange}/>
+                <div className="search-bar">
+                    <img src="/images/search-icon.svg" alt="" />
+                    <input 
+                    type="text" 
+                    name="token-search" 
+                    id="token-seacrch"
+                    onChange={handleChange}/>
+                </div>
             </form>
+
+            <div className="warning">
+                {
+                    (screenWidth < 700) &&
+                    <p>*rotate your device for more information</p>
+            
+                }
+                <p>*click the currency for more information</p>
+            </div>
+
             <table className="token-table">
             <thead>
             <tr> 
