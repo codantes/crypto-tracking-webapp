@@ -1,7 +1,9 @@
 header{
-    background-image: url("/src/background/svg\(5\).png");
+    background-image: url("/src/background/svg\(1\).png");
+    background-repeat: no-repeat;
+    background-position: top;
     background-attachment: fixed;
-    height: 60vh;
+    height: 50vh;
 }
 
 .menu{
@@ -43,6 +45,7 @@ header{
     font-weight: bolder;
     font-size: 20px;
     font-family: var(--para);
+    cursor: pointer;
 }
 
 .banner{
@@ -51,7 +54,7 @@ header{
 }
 
 .banner h1{
-    color: white;
+    color: #ebf9f9;
     font-family: var(--subheading);
     font-size: 60px;
     width: 75%;
@@ -59,28 +62,106 @@ header{
     text-transform: capitalize;
 }
 
-.crypto-intro{
-    margin-block: 2rem;
+.crypto-intro, .crypto-analysis{
+   margin-block: 2rem;
 }
 
-.crypto-intro article{
+.crypto-intro article,.crypto-analysis article{
     width: 90%;
     margin-inline: auto;
     text-align: center;
 }
 
-.crypto-intro h1{
-    font-size: 20px;
+.crypto-intro h1, .crypto-analysis h1{
+    font-size: 45px;
     font-family: var(--subheading);
+    margin-block-start: 1rem;
+    width: 90%;
+    margin-inline: auto;
+    color: #049cc0;
+}
+
+.crypto-intro p, .crypto-analysis p{
+    font-size: 19px;
+    font-family: var(--para);
+    margin-block: 1.5rem;
+    width: 90%;
+    margin-inline: auto;
+    color: rgb(63, 126, 171);
+}
+
+.crypto-intro .info, .crypto-analysis .info{
+    margin-bottom: 3rem;
+}
+
+.crypto-intro img, .crypto-analysis img{
+    width: 90%;
+    margin-inline: auto;
+}
+
+.crypto-analysis ul{
+    list-style-type: none;
+}
+
+.crypto-analysis ul h2{
+    font-size: 22px;
+}
+
+.tracker-btn button{
+    padding-inline: 1.5rem;
+    padding-block: .3rem;
+    width: 9rem;
+    border-radius: 30px;
+    border: none;
+    background: rgb(39,178,195);
+    background: linear-gradient(41deg, rgba(39,178,195,1) 0%, rgba(172,18,222,1) 99%); 
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: var(--para);
+    cursor: pointer;
 }
 
 @media (min-width: 700px){
     .menu{
-        width: 70%;
+        width: 85%;
         margin-inline: auto;
+    }
+
+    header{
+        height: 80vh;
     }
 
     .banner h1{
         font-size: 90px;
     }
+
+    .crypto-intro article, .crypto-analysis article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 75%;
+        margin-block: 3rem;
+        align-items: center;
+    }
+
+    .crypto-intro article img, .crypto-analysis article img{
+        grid-column-start: 1;
+        width: 100%;
+    }
+    
+    .crypto-intro p, .crypto-analysis p{
+        text-align: left;
+        margin-block: unset;
+    }
+
+    .crypto-analysis p{
+        grid-row: span 3;
+    }
+
+    .crypto-intro .tracker-btn{
+        grid-column-start: 2;
+        margin-inline-start: auto;
+        margin-inline-end: 3rem;
+    }
+
 }
